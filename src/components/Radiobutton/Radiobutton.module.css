@@ -1,0 +1,68 @@
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-circe-rounded, sans-serif);
+  font-size: 20px;
+  color: var(--default);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.input {
+  display: none;
+}
+
+.customRadio {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid var(--blue-100);
+  background: var(--surface1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border 0.2s,
+    background 0.2s;
+  position: relative;
+}
+
+.input:checked + .customRadio {
+  background: var(--blue-100);
+  border-color: var(--blue-100);
+}
+
+.input:checked + .customRadio::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: var(--surface1);
+  border-radius: 50%;
+}
+
+.input:not(:checked) + .customRadio {
+  background: var(--surface5);
+  border-color: var(--surface5);
+}
+
+.radioLabel:hover .input:not(:checked) + .customRadio {
+  border-color: var(--blue-100);
+  background: var(--blue-100);
+}
+.radioLabel:hover .input:checked + .customRadio {
+  background: var(--blue-110);
+  border-color: var(--blue-110);
+}
+
+.input:disabled + .customRadio {
+  background: var(--surface5);
+  border-color: var(--surface5);
+  opacity: 0.7;
+}
+
+.input:disabled ~ .labelText {
+  color: var(--muted);
+}

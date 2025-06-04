@@ -19,7 +19,7 @@
 }
 
 .button:hover:not(:disabled) {
-  background: #0090f9;
+  background: var(--blue-110);
 }
 
 .button:disabled {
