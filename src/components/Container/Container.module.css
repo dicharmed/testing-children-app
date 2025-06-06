@@ -3,32 +3,6 @@
   background-color: var(--surface1);
 }
 
-.topLine {
-  position: relative;
-}
-
-.topLine::after {
-  content: '';
-  display: block;
-  width: 80%;
-  height: 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--blue-070);
-  border-top-left-radius: 20px;
-}
-.topLine::before {
-  content: '';
-  display: block;
-  width: 20%;
-  height: 16px;
-  position: absolute;
-  right: 0;
-  background-color: var(--blue-060);
-  border-top-right-radius: 20px;
-}
-
 .content {
   padding: 64px 64px 32px;
 }
