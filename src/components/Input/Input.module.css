@@ -4,7 +4,7 @@
   font-size: 20px;
   color: var(--default);
   background: var(--surface1);
-  border: 2px solid var(--violet-110);
+  border: 2px solid var(--muted);
   border-radius: 8px;
   padding: 10px 16px;
   outline: none;

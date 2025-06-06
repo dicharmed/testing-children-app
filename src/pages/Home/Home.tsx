@@ -4,9 +4,11 @@ import { RadioButton } from '../../components/RadioButton'
 import { useState } from 'react'
 import { Input } from '../../components/Input'
 import { TextArea } from '../../components/TextArea'
+import { DatePicker } from '../../components/DatePicker'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
+  const [date, setDate] = useState<Date | null>(null)
   return (
     <div>
       <RadioButton
@@ -24,6 +26,7 @@ export const Home: React.FC = () => {
           placeholder=" "
         />
       </form>
+      <DatePicker label="Дата рождения ребенка" value={date} onChange={setDate} id="childBirth" />
     </div>
   )
 }
