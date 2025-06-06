@@ -7,12 +7,17 @@ import { TextArea } from '../../components/TextArea'
 import { DatePicker } from '../../components/DatePicker'
 import { Container } from '../../components/Container'
 import { Footer } from '../../components/Footer'
+import { Alert } from '../../components/Alert'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
   const [date, setDate] = useState<Date | null>(null)
   return (
     <Container title="Home page" step={2} total={3}>
+      <Alert
+        variant="error"
+        message="Допустимые форматы файлов: jpg, jpeg, png, pdf. Размер не более 5 Мб"
+      />
       <RadioButton
         checked={value === 'rare'}
         onChange={() => setValue('rare')}

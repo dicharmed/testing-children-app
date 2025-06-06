@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background-color: var(--muted);
+}
+
+.errorWrapper {
+  background-color: var(--red-050);
+}
+
+.message {
+  margin-left: 8px;
+  color: var(--default);
+  font-size: var(--font-regular14-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.errorMessage {
+  color: var(--red-110);
+}
