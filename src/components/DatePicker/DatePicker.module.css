@@ -6,14 +6,12 @@
 }
 
 .label {
-  font-family: var(--font-circe-rounded, sans-serif);
-  font-size: 20px;
+  font-size: var(--font-title3-size);
   color: var(--default);
 }
 
 .input {
-  font-family: var(--font-circe-rounded, sans-serif);
-  font-size: 20px;
+  font-size: var(--font-title3-size);
   color: var(--default);
   background: var(--surface1);
   border: 2px solid var(--muted);
@@ -57,7 +55,7 @@
 :global(.react-datepicker__current-month) {
   font-size: 18px;
   color: var(--default);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-bottom: 8px;
   letter-spacing: 0.01em;
   text-transform: capitalize;
@@ -70,7 +68,7 @@
 
 :global(.react-datepicker__day-name) {
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--font-regular12-size);
   width: 40px;
   line-height: 40px;
 }

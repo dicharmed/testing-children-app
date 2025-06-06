@@ -5,12 +5,14 @@ import { useState } from 'react'
 import { Input } from '../../components/Input'
 import { TextArea } from '../../components/TextArea'
 import { DatePicker } from '../../components/DatePicker'
+import { Container } from '../../components/Container'
+import { Footer } from '../../components/Footer'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
   const [date, setDate] = useState<Date | null>(null)
   return (
-    <div>
+    <Container title="Home page">
       <RadioButton
         checked={value === 'rare'}
         onChange={() => setValue('rare')}
@@ -27,6 +29,10 @@ export const Home: React.FC = () => {
         />
       </form>
       <DatePicker label="Дата рождения ребенка" value={date} onChange={setDate} id="childBirth" />
-    </div>
+      <Footer text="Шаг 1/3">
+        <Button>ok</Button>
+        <Button>cncel</Button>
+      </Footer>
+    </Container>
   )
 }

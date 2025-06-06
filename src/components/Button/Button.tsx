@@ -1,13 +1,6 @@
 import React from 'react'
 import styles from './Button.module.css'
-
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary'
-  leftIcon?: React.ReactNode
-  rightIcon?: React.ReactNode
-  children: React.ReactNode
-  width?: number
-}
+import type { ButtonProps } from '../../app/types/types'
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',

@@ -3,7 +3,7 @@
   align-items: center;
   gap: 12px;
   font-family: var(--font-circe-rounded, sans-serif);
-  font-size: 20px;
+  font-size: var(--font-title3-size);
   color: var(--default);
   cursor: pointer;
   user-select: none;
