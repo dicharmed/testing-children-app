@@ -1,6 +1,7 @@
 import type React from 'react'
 import styles from './Container.module.css'
 import { ProgressBar } from '../ProgressBar'
+import { Typography } from '../Typography'
 
 type ContainerProps = {
   title: string
@@ -22,7 +23,7 @@ export const Container: React.FC<ContainerProps> = ({
       {!withoutProgressBar && <ProgressBar step={step} total={total} />}
 
       <div className={styles.content}>
-        <div className={styles.contentHeader}>{title}</div>
+        <Typography variant="h1" title={title} className={styles.contentHeader} />
         <div className={styles.contentMain}>{children}</div>
       </div>
     </div>

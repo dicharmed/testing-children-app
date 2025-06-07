@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Banner.module.css'
 import { v4 as uuid } from 'uuid'
+import { Typography } from '../Typography'
 
 type DataType = {
   icon: React.ReactNode
@@ -15,7 +16,7 @@ export const Banner: React.FC<BannerProps> = ({ data }) => {
       {data.map(({ icon, message }) => (
         <div key={uuid()} className={styles.paragraph}>
           <div>{icon}</div>
-          <div className={styles.message}>{message}</div>
+          <Typography variant="h3" title={message} className={styles.message} />
         </div>
       ))}
     </div>

@@ -13,11 +13,8 @@
 
 .message {
   margin-left: 8px;
-  color: var(--default);
-  font-size: var(--font-regular14-size);
-  font-weight: var(--font-weight-regular);
 }
 
-.errorMessage {
+.message.errorMessage {
   color: var(--red-110);
 }

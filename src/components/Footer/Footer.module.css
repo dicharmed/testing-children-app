@@ -3,8 +3,7 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-.left {
-  font-size: var(--font-regular14-size);
+.wrapper .left {
   font-weight: var(--font-weight-bold);
   color: var(--muted);
 }

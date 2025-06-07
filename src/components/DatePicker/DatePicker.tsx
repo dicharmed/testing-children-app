@@ -3,7 +3,6 @@ import ReactDatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import styles from './DatePicker.module.css'
 import { ru } from 'date-fns/locale'
-import { Input } from '../Input'
 
 type DatePickerProps = {
   label: string
