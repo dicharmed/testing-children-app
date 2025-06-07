@@ -1,0 +1,20 @@
+.typography {
+  font-size: var(--font-regular12-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--default);
+}
+
+.h1 {
+  font-size: var(--font-title3-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--header);
+}
+
+.h2 {
+  font-size: var(--font-regular16-size);
+  color: var(--header);
+}
+
+.h3 {
+  font-size: var(--font-regular14-size);
+}
