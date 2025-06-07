@@ -1,6 +1,6 @@
 .input,
 .textarea {
-  font-size: var(--font-title3-size);
+  font-size: var(--font-regular16-size);
   color: var(--default);
   background: var(--surface1);
   border: 2px solid var(--muted);

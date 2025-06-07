@@ -6,7 +6,7 @@
 }
 
 .label {
-  font-size: var(--font-title3-size);
+  font-size: var(--font-regular16-size);
   color: var(--default);
   margin-bottom: 0;
 }

@@ -7,7 +7,6 @@
   font-size: var(--font-regular14-size);
   font-weight: var(--font-weight-bold);
   color: var(--muted);
-  text-transform: capitalize;
 }
 
 .right {

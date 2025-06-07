@@ -1,0 +1,20 @@
+.wrapper {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--red-050);
+  border-radius: 8px;
+}
+
+.paragraph {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.message {
+  margin-left: 16px;
+  font-size: var(--font-regular14-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--default);
+}
