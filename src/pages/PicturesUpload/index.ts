@@ -1,0 +1,1 @@
+export { PicturesUpload } from './PicturesUpload'

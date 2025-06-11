@@ -12,6 +12,9 @@ import { Banner } from '../../components/Banner/Banner'
 import ThumsUpIcon from '../../assets/icons/thumbs-up.svg?react'
 import FlagIcon from '../../assets/icons/flag.svg?react'
 import { ImageUpload } from '../../components/ImageUpload'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '../../constants/routes'
+import { Typography } from '../../components/Typography'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
@@ -26,7 +29,8 @@ export const Home: React.FC = () => {
     { icon: <FlagIcon />, message: 'Все вопросы обязательны к заполнению' },
   ]
   return (
-    <Container title="Home page" step={2} total={3}>
+    <Container title="ИИ-психодиагностика детей" step={0} total={0}>
+      <Link to={ROUTES.UPLOAD}>Начать тест</Link>
       <Alert
         variant="error"
         message="Допустимые форматы файлов: jpg, jpeg, png, pdf. Размер не более 5 Мб"
@@ -49,13 +53,7 @@ export const Home: React.FC = () => {
       <DatePicker label="Дата рождения ребенка" value={date} onChange={setDate} id="childBirth" />
 
       <Banner data={data} />
-      <ImageUpload
-        label="Дом, дерево, человек"
-        value={file}
-        onChange={setFile}
-        accept=".jpg,.jpeg,.png"
-        maxSizeMB={5}
-      />
+      <ImageUpload label="Дом, дерево, человек" value={file} onChange={setFile} maxSizeMB={5} />
       <Footer text="Шаг 1/3">
         <Button>ok</Button>
         <Button>cncel</Button>

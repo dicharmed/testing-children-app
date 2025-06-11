@@ -5,8 +5,8 @@ import { Typography } from '../Typography'
 
 type ContainerProps = {
   title: string
-  step: number
-  total: number
+  step?: number
+  total?: number
   children: React.ReactNode
   withoutProgressBar?: boolean
 }

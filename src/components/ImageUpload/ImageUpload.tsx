@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import styles from './ImageUpload.module.css'
 import UploadIcon from '../../assets/icons/upload-icon.svg?react'
+import { Typography } from '../Typography'
 
 type ImageUploadProps = {
   label: string
@@ -8,6 +9,7 @@ type ImageUploadProps = {
   onChange: (file: File | null) => void
   accept?: string
   maxSizeMB?: number
+  className?: string
 }
 
 export const ImageUpload: React.FC<ImageUploadProps> = ({
@@ -16,13 +18,14 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
   onChange,
   accept = '.jpg,.jpeg,.png,.pdf',
   maxSizeMB = 5,
+  className,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [dragActive, setDragActive] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [preview, setPreview] = useState<string | null>(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (value) {
       const url = URL.createObjectURL(value)
       setPreview(url)
@@ -63,7 +66,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={[styles.wrapper, className].join(' ')}>
       <div
         className={`${styles.uploadBox} ${dragActive ? styles.dragActive : ''}`}
         onClick={() => inputRef.current?.click()}
@@ -102,7 +105,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
           tabIndex={-1}
         />
       </div>
-      <div className={styles.label}>{label}</div>
+      <Typography variant="h2" title={label} className={styles.label} />
       {error && <div style={{ color: 'var(--red-110)', marginTop: 8 }}>{error}</div>}
     </div>
   )

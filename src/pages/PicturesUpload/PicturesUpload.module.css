@@ -1,0 +1,8 @@
+.imagesUploadWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 32px 0 70px;
+}
