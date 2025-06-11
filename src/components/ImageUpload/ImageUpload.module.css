@@ -1,0 +1,67 @@
+.wrapper {
+  width: fit-content;
+}
+.uploadBox {
+  width: 215px;
+  height: 160px;
+  position: relative;
+  background: var(--surface3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.uploadBox.dragActive {
+  border-color: var(--violet-110);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--blue-050);
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  font-family: var(--font-circe-rounded, sans-serif);
+  font-size: 16px;
+  color: var(--default);
+  text-align: center;
+  padding: 2px 8px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--red-110);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

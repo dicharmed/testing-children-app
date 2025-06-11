@@ -11,10 +11,12 @@ import { Alert } from '../../components/Alert'
 import { Banner } from '../../components/Banner/Banner'
 import ThumsUpIcon from '../../assets/icons/thumbs-up.svg?react'
 import FlagIcon from '../../assets/icons/flag.svg?react'
+import { ImageUpload } from '../../components/ImageUpload'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
   const [date, setDate] = useState<Date | null>(null)
+  const [file, setFile] = useState<File | null>(null)
   const data = [
     {
       icon: <ThumsUpIcon />,
@@ -47,6 +49,13 @@ export const Home: React.FC = () => {
       <DatePicker label="Дата рождения ребенка" value={date} onChange={setDate} id="childBirth" />
 
       <Banner data={data} />
+      <ImageUpload
+        label="Дом, дерево, человек"
+        value={file}
+        onChange={setFile}
+        accept=".jpg,.jpeg,.png"
+        maxSizeMB={5}
+      />
       <Footer text="Шаг 1/3">
         <Button>ok</Button>
         <Button>cncel</Button>
