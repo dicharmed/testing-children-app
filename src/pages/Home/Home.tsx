@@ -2,9 +2,6 @@ import { Button } from '../../components/Button'
 import ArrowIcon from '../../assets/icons/Forward-right.svg?react'
 import { RadioButton } from '../../components/RadioButton'
 import { useState } from 'react'
-import { Input } from '../../components/Input'
-import { TextArea } from '../../components/TextArea'
-import { DatePicker } from '../../components/DatePicker'
 import { Container } from '../../components/Container'
 import { Footer } from '../../components/Footer'
 import { Alert } from '../../components/Alert'
@@ -18,7 +15,7 @@ import { Typography } from '../../components/Typography'
 
 export const Home: React.FC = () => {
   const [value, setValue] = useState('rare')
-  const [date, setDate] = useState<Date | null>(null)
+
   const [file, setFile] = useState<File | null>(null)
   const data = [
     {
@@ -29,7 +26,7 @@ export const Home: React.FC = () => {
     { icon: <FlagIcon />, message: 'Все вопросы обязательны к заполнению' },
   ]
   return (
-    <Container title="ИИ-психодиагностика детей" step={0} total={0}>
+    <Container title="ИИ-психодиагностика детей" withoutProgressBar>
       <Link to={ROUTES.UPLOAD}>Начать тест</Link>
       <Alert
         variant="error"
@@ -42,15 +39,6 @@ export const Home: React.FC = () => {
         name="frequency"
       />
       <Button rightIcon={<ArrowIcon />}>Узнать результаты</Button>
-      <form>
-        <Input label="Имя ребенка" id="childName" placeholder=" " />
-        <TextArea
-          label="Есть ли у Вашего ребенка какие-либо особенности развития или поведения, о которых Вы хотели бы сообщить дополнительно?"
-          id="childFeatures"
-          placeholder=" "
-        />
-      </form>
-      <DatePicker label="Дата рождения ребенка" value={date} onChange={setDate} id="childBirth" />
 
       <Banner data={data} />
       <ImageUpload label="Дом, дерево, человек" value={file} onChange={setFile} maxSizeMB={5} />

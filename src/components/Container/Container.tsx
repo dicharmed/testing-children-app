@@ -20,7 +20,7 @@ export const Container: React.FC<ContainerProps> = ({
 }) => {
   return (
     <div className={styles.wrapper}>
-      {!withoutProgressBar && <ProgressBar step={step} total={total} />}
+      {!withoutProgressBar && step && total && <ProgressBar step={step} total={total} />}
 
       <div className={styles.content}>
         <Typography variant="h1" title={title} className={styles.contentHeader} />
